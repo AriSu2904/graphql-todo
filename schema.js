@@ -10,6 +10,7 @@ type Todo {
 
 type Query {
     getAll: [Todo!]!,
+    getById(id: ID!): Todo!
 },
 
 type Mutation {

@@ -7,6 +7,9 @@ const resolvers = {
     Query: {
         getAll: async () => {
             return Todo.find();
+        },
+        getById: async (_, args) => {
+            return Todo.findById(args.id);
         }
     },
     Mutation: {
