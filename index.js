@@ -5,7 +5,7 @@ import typeDefs from "./schema.js";
 import {resolvers} from "./resolvers.js";
 
 try {
-    await mongoose.connect('mongodb://127.0.0.1:27017/latihan');
+    await mongoose.connect(`mongodb://${host}:${port}/${db}`);
 }catch (err){
     console.log(err)
 }
