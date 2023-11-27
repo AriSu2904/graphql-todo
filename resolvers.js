@@ -1,5 +1,4 @@
 import Todo from "./model/todo.js";
-import {GraphQLScalarType, Kind} from "graphql";
 import custom from "./scalarCustom.js";
 
 const resolvers = {
@@ -15,7 +14,12 @@ const resolvers = {
             const newTodo = new Todo(args);
             await newTodo.save()
             return newTodo;
-        }
+        },
+        updateTodo: async (_, args) => Todo.findByIdAndUpdate(args.id, args, {new: true}),
+        deleteTodo: async (_, args) => {
+            const deletedTodo = await Todo.findByIdAndDelete(args.id)
+            return !!deletedTodo
+        },
     }
 }
 
