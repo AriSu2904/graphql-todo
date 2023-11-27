@@ -1,0 +1,23 @@
+{
+  "name": "graphql-todo",
+  "version": "1.0.0",
+  "description": "TodoList with graphql and expressjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Todo",
+    "Todolist",
+    "Graphql",
+    "Express",
+    "Nodejs",
+    "Javascript"
+  ],
+  "author": "Ari Susanto",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^4.9.5",
+    "graphql": "^16.8.1"
+  }
+}
