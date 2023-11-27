@@ -1,16 +1,20 @@
 const typeDefs = `#graphql
-    scalar Date   
-    type Todo {
-        id: ID!,
-        title: String!,
-        description: String!,
-        created_at: Date,
-        updated_at: Date
-    }
+scalar Date
+type Todo {
+    id: ID!,
+    title: String!,
+    description: String!,
+    createdAt: Date,
+    updatedAt: Date
+}
 
-    type Query {
-        getAll: [Todo!]!,
-    }
+type Query {
+    getAll: [Todo!]!,
+},
+
+type Mutation {
+    addTodo(title: String!, description: String!): Todo
+}
 `
 
 export default typeDefs
